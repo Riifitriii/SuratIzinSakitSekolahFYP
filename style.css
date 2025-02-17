@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.kertas_a4 {
+    width: 21cm;
+    height: 29.7cm;
+    background-color: white;
+    padding: 2cm 2cm 2cm 2cm;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    margin: auto;
+    position: relative;
+}
+.date{
+    position: absolute;
+    top: 0.5cm;
+    right: 2cm;
+    font-size: 12pt;
+    font-weight: normal;
+}
+.title {
+    text-align: center;
+    font-size: 16pt;
+}
+.header {
+    text-align: left;
+    margin-bottom: 0.5;
+}
+.content {
+    text-align: justify;
+    margin-top: 0.5cm;
+}
+ul {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.signature {
+    margin-top: 1cm;
+    text-align: right; 
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+button:hover {
+    background-color: #45a049;
+
+}
+
+/* Saat print */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .kertas_a4 {
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+        padding: 2cm;
+    }
+
+    button {
+        display: none;
+    }
+
+    @page {
+        size: A4; /* Cetak hanya dalam format A4 */
+        margin: 0; /* Hilangkan margin otomatis dari browser */
+    }
+}
